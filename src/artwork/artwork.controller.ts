@@ -19,16 +19,16 @@ export class ArtworkController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.artworkService.findOne(+id);
+    return this.artworkService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateArtworkDto: UpdateArtworkDto) {
-    return this.artworkService.update(+id, updateArtworkDto);
+    return this.artworkService.update(id, updateArtworkDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.artworkService.remove(+id);
+    return this.artworkService.remove(id);
   }
 }

@@ -35,7 +35,7 @@ export class ArtworkService {
     return this.findOne(id);
   }
 
-  async remove(id: number): Promise<void> {
+  async remove(id: string): Promise<void> {
     const result = await this.artworkRepository.delete(id);
     if (result.affected === 0) {
       throw new NotFoundException(`Artwork with ID ${id} is not found`);
