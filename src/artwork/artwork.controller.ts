@@ -3,7 +3,7 @@ import { ArtworkService } from './artwork.service';
 import { CreateArtworkDto } from './dto/create-artwork.dto';
 import { UpdateArtworkDto } from './dto/update-artwork.dto';
 
-@Controller('artwork')
+@Controller('artworks')
 export class ArtworkController {
   constructor(private readonly artworkService: ArtworkService) {}
 
